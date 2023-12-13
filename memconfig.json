@@ -1,0 +1,223 @@
+{
+  "schema": {
+    "types": [
+      {
+        "name": "Root",
+        "actions": [
+          {
+            "name": "run",
+            "type": "Void",
+            "params": [
+              {
+                "name": "modify",
+                "type": "String",
+                "optional": true
+              },
+              {
+                "name": "program",
+                "type": "String",
+                "optional": true
+              }
+            ]
+          },
+          {
+            "name": "handler",
+            "hints": {
+              "hidden": true
+            },
+            "type": "Void"
+          },
+          {
+            "name": "changeTypeDescription",
+            "type": "Void",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "programName",
+                "description": "The program name to change the description of the type",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "typeName",
+                "description": "The type name to change the description",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "description",
+                "description": "The new description",
+                "type": "String",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "name": "changeActionDescription",
+            "type": "Void",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "programName",
+                "description": "The program name to change the description of the action",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "memberName",
+                "description": "The action name to change the description",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "typeName",
+                "description": "The parent type to which this action belongs",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "description",
+                "description": "The new description",
+                "type": "String",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "name": "changeFieldDescription",
+            "type": "Void",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "programName",
+                "description": "The program name to change the description of the field",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "memberName",
+                "description": "The field name to change the description",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "typeName",
+                "description": "The parent type to which this field belongs",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "description",
+                "description": "The new description",
+                "type": "String",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "name": "changeEventDescription",
+            "type": "Void",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "programName",
+                "description": "The program name to change the description of the event",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "memberName",
+                "description": "The event name to change the description",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "typeName",
+                "description": "The parent type to which this event belongs",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "description",
+                "description": "The new description",
+                "type": "String",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "name": "changeParamDescription",
+            "type": "Void",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "programName",
+                "description": "The unique identifier of the program's schema where the modification is to be made.",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "typeName",
+                "description": "The name of the type within the schema. like Root, User, etc.",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "memberName",
+                "description": "The name of then member name to modify the params.",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "paramName",
+                "description": "The name of the parameter within the target item for which the description will be updated.",
+                "type": "String",
+                "optional": false
+              },
+              {
+                "name": "description",
+                "description": "The new, updated description to be assigned to the target parameter.",
+                "type": "String",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "name": "openPr",
+            "type": "Void",
+            "params": [
+              {
+                "name": "program",
+                "type": "String"
+              }
+            ]
+          },
+          {
+            "name": "updatePr",
+            "type": "Void",
+            "params": [
+              {
+                "name": "program",
+                "type": "String"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "user": "github:users.one(name:\"membrane-io\")",
+    "agent": "agi-next:"
+  }
+}
